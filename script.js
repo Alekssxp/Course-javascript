@@ -42,7 +42,7 @@ for(let i = 1; i < 8; i++){
         }
     }
 }
-if (personalMovieDB.count > 1 && personalMovieDB.count < 10){
+if (personalMovieDB.count > 0 && personalMovieDB.count < 10){
     alert('Просмотрено довольно мало фильмов');
 } else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30){
     alert('Вы классический зритель');
