@@ -54,15 +54,32 @@ rememberMyFilms();
 function detectPersonalLevel (){
 
     if (personalMovieDB.count > 0 && personalMovieDB.count < 10){
-        alert('Просмотрено довольно мало фильмов');
+        console.log('Просмотрено довольно мало фильмов');
     } else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30){
-        alert('Вы классический зритель');
+        console.log('Вы классический зритель');
     } else if (personalMovieDB.count > 30){
-        alert('Вы киноман');
+        console.log('Вы киноман');
     } else {
-        alert('Произошла ошибка');
+        console.log('Произошла ошибка');
     }
 }
 detectPersonalLevel();
 
-console.log(personalMovieDB);
+function showMyDB (){
+    if (personalMovieDB.privat != true) {
+        console.log(personalMovieDB);
+    } else {
+        console.log('Ошибка!!!');
+    }
+}
+
+showMyDB ();
+
+function writeYourGenres () {
+    for (let i = 0; i < 3; i++) {
+        let a = prompt(`Ваш любимый жанр под номером ${i + 1}?`);
+        personalMovieDB.genres[i] = a;
+    }
+}
+
+writeYourGenres();
